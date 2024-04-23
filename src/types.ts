@@ -27,6 +27,51 @@ export type DocStyle = 'jsdoc' | 'tomdoc'
 
 export type Arrayable<T> = T | readonly T[]
 
+export type ResultNotFound = {
+  found: false
+  path?: undefined
+}
+
+export type ResultFound = {
+  found: true
+  path: string | null
+}
+
+export type ResolvedResult = ResultNotFound | ResultFound
+
+export type ResolverResolve = (
+  modulePath: string,
+  sourceFile: string,
+  config: unknown,
+) => ResolvedResult
+
+export type ResolverResolveImport = (
+  modulePath: string,
+  sourceFile: string,
+  config: unknown,
+) => string | undefined
+
+export type Resolver = {
+  interfaceVersion?: 1 | 2
+  resolve: ResolverResolve
+  resolveImport: ResolverResolveImport
+}
+
+export type ImportResolverItem = {
+  // Just for identification, doesn't actually matter
+  // node, typescript, webpack...
+  name?: string
+
+  // Enabled by default
+  enable?: boolean
+
+  // Options passed to the resolver
+  options?: NodeResolverOptions | TsResolverOptions | WebpackResolverOptions | unknown
+
+  // Any object satisfied Resolver type
+  resolver: Resolver
+};
+
 export type ImportResolver =
   | LiteralUnion<'node' | 'typescript' | 'webpack', string>
   | {

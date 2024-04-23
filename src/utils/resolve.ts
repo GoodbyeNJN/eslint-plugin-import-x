@@ -8,41 +8,13 @@ import type {
   ImportSettings,
   PluginSettings,
   RuleContext,
+  Resolver,
+  ImportResolverItem,
 } from '../types'
 
 import { hashObject } from './hash'
 import { ModuleCache } from './module-cache'
 import { pkgDir } from './pkg-dir'
-
-export type ResultNotFound = {
-  found: false
-  path?: undefined
-}
-
-export type ResultFound = {
-  found: true
-  path: string | null
-}
-
-export type ResolvedResult = ResultNotFound | ResultFound
-
-export type ResolverResolve = (
-  modulePath: string,
-  sourceFile: string,
-  config: unknown,
-) => ResolvedResult
-
-export type ResolverResolveImport = (
-  modulePath: string,
-  sourceFile: string,
-  config: unknown,
-) => string | undefined
-
-export type Resolver = {
-  interfaceVersion?: 1 | 2
-  resolve: ResolverResolve
-  resolveImport: ResolverResolveImport
-}
 
 export const CASE_SENSITIVE_FS = !fs.existsSync(
   path.resolve(
@@ -185,8 +157,8 @@ function fullResolve(
 
   const resolvers = resolverReducer(configResolvers, new Map())
 
-  for (const [name, config] of resolvers) {
-    const resolver = requireResolver(name, sourceFile)
+  for (const [nameOrResolver, config] of resolvers) {
+    const resolver = typeof nameOrResolver === 'string' ? requireResolver(nameOrResolver, sourceFile) : nameOrResolver
     const resolved = withResolver(resolver, config)
 
     if (!resolved.found) {
@@ -213,10 +185,13 @@ export function relative(
 
 function resolverReducer(
   resolvers: Arrayable<ImportResolver>,
-  map: Map<string, unknown>,
+  map: Map<string | Resolver, unknown>,
 ) {
   if (Array.isArray(resolvers)) {
-    for (const r of resolvers as ImportResolver[]) resolverReducer(r, map)
+    for (const resolver of resolvers as ImportResolverItem[]) {
+      const enable = Boolean(resolver.enable ?? true)
+      enable && map.set(resolver.resolver, resolver.options)
+    }
     return map
   }
 
