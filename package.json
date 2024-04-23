@@ -30,7 +30,7 @@
     "export"
   ],
   "scripts": {
-    "build": "tsc -p src",
+    "build": "tsup",
     "clean": "rimraf lib",
     "codesandbox:install": "yarn --ignore-engines",
     "lint": "run-p lint:*",
@@ -111,6 +111,7 @@
     "rimraf": "^5.0.5",
     "svelte": "^4.2.12",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "type-fest": "^4.14.0",
     "typescript": "^5.4.3"
   }
