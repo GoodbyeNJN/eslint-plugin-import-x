@@ -21,7 +21,7 @@ function isNonExportStatement({ type }: TSESTree.Node) {
   )
 }
 
-export = createRule({
+export default createRule({
   name: 'exports-last',
   meta: {
     type: 'suggestion',

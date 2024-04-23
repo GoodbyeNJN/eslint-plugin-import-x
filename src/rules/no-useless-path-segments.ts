@@ -40,7 +40,7 @@ type Options = ModuleOptions & {
 
 type MessageId = 'useless'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-useless-path-segments',
   meta: {
     type: 'suggestion',

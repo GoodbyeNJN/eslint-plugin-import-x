@@ -82,7 +82,7 @@ type Options = {
 
 type MessageId = 'newline'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'newline-after-import',
   meta: {
     type: 'layout',

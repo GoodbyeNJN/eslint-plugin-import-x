@@ -13,7 +13,7 @@ const typeScriptExtensions = ['.ts', '.tsx'] as const
 
 const allExtensions = [...typeScriptExtensions, '.js', '.jsx'] as const
 
-export = {
+export default {
   settings: {
     'import-x/extensions': allExtensions,
     'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],

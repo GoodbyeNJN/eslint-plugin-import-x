@@ -128,7 +128,7 @@ const defaults: Options = Object.fromEntries(
   ]),
 )
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-anonymous-default-export',
   meta: {
     type: 'suggestion',

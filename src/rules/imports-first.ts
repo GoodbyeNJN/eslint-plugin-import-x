@@ -8,7 +8,7 @@ const createRule = ESLintUtils.RuleCreator(ruleName =>
   docsUrl(ruleName, '7b25c1cb95ee18acc1531002fd343e1e6031f9ed'),
 )
 
-export = createRule({
+export default createRule({
   ...first,
   name: 'imports-first',
   meta: {

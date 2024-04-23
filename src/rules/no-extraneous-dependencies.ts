@@ -343,7 +343,7 @@ type MessageId =
   | 'optDep'
   | 'missing'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-extraneous-dependencies',
   meta: {
     type: 'problem',

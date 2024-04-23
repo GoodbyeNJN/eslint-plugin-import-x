@@ -74,7 +74,7 @@ function checkImportForRelativePackage(
   }
 }
 
-export = createRule<[ModuleOptions?], MessageId>({
+export default createRule<[ModuleOptions?], MessageId>({
   name: 'no-relative-packages',
   meta: {
     type: 'suggestion',

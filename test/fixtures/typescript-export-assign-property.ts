@@ -1,3 +1,3 @@
 const AnalyticsNode = { Analytics: {} }
 
-export = AnalyticsNode.Analytics
+export default AnalyticsNode.Analytics

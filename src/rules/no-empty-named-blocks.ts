@@ -21,7 +21,7 @@ function getEmptyBlockRange(tokens: TSESTree.Token[], index: number) {
   return [start, end] as const
 }
 
-export = createRule({
+export default createRule({
   name: 'no-empty-named-blocks',
   meta: {
     type: 'suggestion',

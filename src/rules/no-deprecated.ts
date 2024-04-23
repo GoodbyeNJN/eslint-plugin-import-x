@@ -23,7 +23,7 @@ function getDeprecation(metadata?: ModuleNamespace | null) {
   return metadata.doc.tags.find(t => t.title === 'deprecated')
 }
 
-export = createRule({
+export default createRule({
   name: 'no-deprecated',
   meta: {
     type: 'suggestion',

@@ -1,6 +1,6 @@
 import { createRule } from '../utils'
 
-export = createRule({
+export default createRule({
   name: 'no-named-export',
   meta: {
     type: 'suggestion',

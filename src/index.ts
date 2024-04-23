@@ -129,7 +129,7 @@ const rules = {
   'imports-first': importsFirst,
 } satisfies Record<string, TSESLint.RuleModule<string, readonly unknown[]>>
 
-export = {
+export default {
   configs,
   rules,
 }

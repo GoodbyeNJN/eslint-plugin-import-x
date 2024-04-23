@@ -3,7 +3,7 @@ import type { PluginConfig } from '../types'
 /**
  * more opinionated config.
  */
-export = {
+export default {
   plugins: ['import-x'],
   rules: {
     'import-x/no-named-as-default': 1,

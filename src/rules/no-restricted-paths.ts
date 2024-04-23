@@ -46,7 +46,7 @@ type Validator = {
   reportInvalidException: (node: TSESTree.Node) => void
 }
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-restricted-paths',
   meta: {
     type: 'problem',

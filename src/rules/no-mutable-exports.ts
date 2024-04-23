@@ -4,7 +4,7 @@ import { createRule } from '../utils'
 
 type MessageId = 'noMutable'
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'no-mutable-exports',
   meta: {
     type: 'suggestion',

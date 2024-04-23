@@ -4,7 +4,7 @@
 
 import { createRule, isUnambiguousModule } from '../utils'
 
-export = createRule({
+export default createRule({
   name: 'unambiguous',
   meta: {
     type: 'suggestion',

@@ -1,3 +1,3 @@
-export = FooBar
+export default FooBar
 
 declare namespace FooBar {}

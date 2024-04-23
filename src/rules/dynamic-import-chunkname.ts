@@ -17,7 +17,7 @@ type MessageId =
   | 'webpackComment'
   | 'chunknameFormat'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'dynamic-import-chunkname',
   meta: {
     type: 'suggestion',

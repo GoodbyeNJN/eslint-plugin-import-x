@@ -3,7 +3,7 @@ import type { PluginConfig } from '../types'
 /**
  * adds platform extensions to Node resolver
  */
-export = {
+export default {
   settings: {
     'import-x/resolver': {
       node: {

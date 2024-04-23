@@ -31,7 +31,7 @@ type Options = {
 
 type MessageId = 'unassigned'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-unassigned-import',
   meta: {
     type: 'suggestion',

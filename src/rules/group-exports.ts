@@ -35,7 +35,7 @@ function accessorChain(node: TSESTree.MemberExpression) {
   return chain
 }
 
-export = createRule<[], 'ExportNamedDeclaration' | 'AssignmentExpression'>({
+export default createRule<[], 'ExportNamedDeclaration' | 'AssignmentExpression'>({
   name: 'group-exports',
   meta: {
     type: 'suggestion',

@@ -63,7 +63,7 @@ function isLiteralString(node: TSESTree.CallExpressionArgument) {
   )
 }
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-commonjs',
   meta: {
     type: 'suggestion',

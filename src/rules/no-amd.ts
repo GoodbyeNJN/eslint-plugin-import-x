@@ -6,7 +6,7 @@ import { createRule } from '../utils'
 
 type MessageId = 'amd'
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'no-amd',
   meta: {
     type: 'suggestion',

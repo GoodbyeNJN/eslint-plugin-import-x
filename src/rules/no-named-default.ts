@@ -2,7 +2,7 @@ import { createRule, getValue } from '../utils'
 
 type MessageId = 'default'
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'no-named-default',
   meta: {
     type: 'suggestion',

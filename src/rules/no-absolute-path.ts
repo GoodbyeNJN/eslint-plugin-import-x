@@ -10,7 +10,7 @@ import type { ModuleOptions } from '../utils'
 
 type MessageId = 'absolute'
 
-export = createRule<[ModuleOptions?], MessageId>({
+export default createRule<[ModuleOptions?], MessageId>({
   name: 'no-absolute-path',
   meta: {
     type: 'suggestion',

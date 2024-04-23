@@ -47,7 +47,7 @@ type Options = 'prefer-inline' | 'prefer-top-level'
 
 type MessageId = 'inline' | 'topLevel'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'consistent-type-specifier-style',
   meta: {
     type: 'suggestion',

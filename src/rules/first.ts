@@ -22,7 +22,7 @@ function isPossibleDirective(node: TSESTree.ProgramStatement) {
 
 type MessageId = 'absolute' | 'order'
 
-export = createRule<['absolute-first'?], MessageId>({
+export default createRule<['absolute-first'?], MessageId>({
   name: 'first',
   meta: {
     type: 'suggestion',

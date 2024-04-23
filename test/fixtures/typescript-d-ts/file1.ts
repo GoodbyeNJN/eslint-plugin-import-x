@@ -3,4 +3,4 @@ declare namespace ts {
   export { x }
 }
 
-export = ts
+export default ts

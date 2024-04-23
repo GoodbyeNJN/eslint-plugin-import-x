@@ -365,7 +365,7 @@ function hasCommentInsideNonSpecifiers(
   )
 }
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-duplicates',
   meta: {
     type: 'problem',

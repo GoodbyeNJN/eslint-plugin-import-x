@@ -1,3 +1,3 @@
-export = foobar
+export default foobar
 
 declare const foobar: number

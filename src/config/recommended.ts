@@ -3,7 +3,7 @@ import type { PluginConfig } from '../types'
 /**
  * The basics.
  */
-export = {
+export default {
   plugins: ['import-x'],
 
   rules: {

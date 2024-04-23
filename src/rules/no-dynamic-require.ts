@@ -36,7 +36,7 @@ type Options = {
 
 type MessageId = 'import' | 'require'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-dynamic-require',
   meta: {
     type: 'suggestion',

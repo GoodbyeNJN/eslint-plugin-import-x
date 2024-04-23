@@ -7,7 +7,7 @@ import type { ModuleOptions } from '../utils'
 
 type MessageId = 'notFound' | 'notFoundDeep'
 
-export = createRule<[ModuleOptions?], MessageId>({
+export default createRule<[ModuleOptions?], MessageId>({
   name: 'named',
   meta: {
     type: 'problem',

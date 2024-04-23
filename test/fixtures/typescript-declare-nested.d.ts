@@ -12,4 +12,4 @@ declare namespace foo.bar {
   function MyFunction()
 }
 
-export = foo
+export default foo

@@ -96,7 +96,7 @@ function isExternalRootModule(file: string) {
   return false
 }
 
-export = createRule<Options[], MessageId>({
+export default createRule<Options[], MessageId>({
   name: 'extensions',
   meta: {
     type: 'suggestion',

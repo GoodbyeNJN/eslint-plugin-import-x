@@ -8,7 +8,7 @@ type Options = {
 
 type MessageId = 'single' | 'any'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'prefer-default-export',
   meta: {
     type: 'suggestion',

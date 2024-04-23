@@ -97,7 +97,7 @@ function makeMessage(
   }
 }
 
-export = createRule<[Options], MessageId>({
+export default createRule<[Options], MessageId>({
   name: 'namespace',
   meta: {
     type: 'problem',

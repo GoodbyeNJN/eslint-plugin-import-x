@@ -8,4 +8,4 @@ declare namespace SomeNamespace {
   }
 }
 
-export = SomeNamespace
+export default SomeNamespace

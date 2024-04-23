@@ -1,4 +1,4 @@
-export = foobar
+export default foobar
 
 declare function foobar(): void
 declare namespace foobar {

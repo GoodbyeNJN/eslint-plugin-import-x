@@ -35,7 +35,7 @@ type Options = {
 
 type MessageId = 'noAllowed'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-internal-modules',
   meta: {
     type: 'suggestion',

@@ -1,4 +1,4 @@
-export = AssignedNamespace
+export default AssignedNamespace
 
 declare namespace AssignedNamespace {
   type MyType = string

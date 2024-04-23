@@ -6,7 +6,7 @@ type Options = {
 
 type MessageId = 'builtin'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-nodejs-modules',
   meta: {
     type: 'suggestion',

@@ -8,7 +8,7 @@ import { importDeclaration, ExportMap, createRule } from '../utils'
 
 type MessageId = 'member'
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'no-named-as-default-member',
   meta: {
     type: 'suggestion',

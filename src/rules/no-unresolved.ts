@@ -20,7 +20,7 @@ type Options = ModuleOptions & {
 
 type MessageId = 'unresolved' | 'casingMismatch'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-unresolved',
   meta: {
     type: 'problem',

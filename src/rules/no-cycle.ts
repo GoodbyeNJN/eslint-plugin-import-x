@@ -27,7 +27,7 @@ type Traverser = {
 
 const traversed = new Set<string>()
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-cycle',
   meta: {
     type: 'suggestion',

@@ -11,7 +11,7 @@ import {
 
 type MessageId = 'noAllowed'
 
-export = createRule<[ModuleOptions?], MessageId>({
+export default createRule<[ModuleOptions?], MessageId>({
   name: 'no-relative-parent-imports',
   meta: {
     type: 'suggestion',

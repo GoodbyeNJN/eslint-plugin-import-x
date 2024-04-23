@@ -401,7 +401,7 @@ type Options = {
 
 type MessageId = 'notFound' | 'unused'
 
-export = createRule<Options[], MessageId>({
+export default createRule<Options[], MessageId>({
   name: 'no-unused-modules',
   meta: {
     type: 'suggestion',

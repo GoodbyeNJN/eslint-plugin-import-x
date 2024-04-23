@@ -5,7 +5,7 @@ import type { PluginConfig } from '../types'
  *
  * Do not expect these to adhere to semver across releases.
  */
-export = {
+export default {
   plugins: ['import-x'],
   rules: {
     'import-x/no-deprecated': 1,

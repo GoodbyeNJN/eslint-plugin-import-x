@@ -49,7 +49,7 @@ type Options = {
 
 type MessageId = 'notAllowed'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-import-module-exports',
   meta: {
     type: 'problem',

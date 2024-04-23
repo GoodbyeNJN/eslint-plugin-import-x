@@ -122,7 +122,7 @@ function shouldSkipTypescriptNamespace(
 
 type MessageId = 'noNamed' | 'multiDefault' | 'multiNamed'
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'export',
   meta: {
     type: 'problem',

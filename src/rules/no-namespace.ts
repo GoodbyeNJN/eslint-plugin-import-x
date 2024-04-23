@@ -13,7 +13,7 @@ type Options = {
   ignore?: string[]
 }
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'no-namespace',
   meta: {
     type: 'suggestion',

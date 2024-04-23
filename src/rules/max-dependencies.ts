@@ -9,7 +9,7 @@ type Options = {
 
 type MessageId = 'max'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'max-dependencies',
   meta: {
     type: 'suggestion',

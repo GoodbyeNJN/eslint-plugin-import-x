@@ -4,7 +4,7 @@ import { ExportMap, createRule } from '../utils'
 
 type MessageId = 'noDefaultExport'
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'default',
   meta: {
     type: 'problem',

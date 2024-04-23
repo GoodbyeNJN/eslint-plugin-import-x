@@ -25,7 +25,7 @@ function isImportingSelf(
   }
 }
 
-export = createRule<[], MessageId>({
+export default createRule<[], MessageId>({
   name: 'no-self-import',
   meta: {
     type: 'problem',

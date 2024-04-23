@@ -4,7 +4,7 @@ import type { PluginConfig } from '../types'
  * unopinionated config. just the things that are necessarily runtime errors
  * waiting to happen.
  */
-export = {
+export default {
   plugins: ['import-x'],
   rules: {
     'import-x/no-unresolved': 2,

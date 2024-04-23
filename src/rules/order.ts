@@ -838,7 +838,7 @@ type MessageId =
   | 'oneLineBetweenGroups'
   | 'order'
 
-export = createRule<[Options?], MessageId>({
+export default createRule<[Options?], MessageId>({
   name: 'order',
   meta: {
     type: 'suggestion',
